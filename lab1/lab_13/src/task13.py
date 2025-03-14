@@ -40,8 +40,8 @@ def ecrire_fichier(nom_fichier, contenu):
 
 # Programme principal
 if __name__ == "__main__":
-    input_file = "input.txt"
-    output_file = "output.txt"
+    input_file = "../txtf/input.txt"
+    output_file = "../txtf/output.txt"
 
     _, valeurs = lire_fichier(input_file)
     resultat = peut_diviser_en_trois(valeurs)

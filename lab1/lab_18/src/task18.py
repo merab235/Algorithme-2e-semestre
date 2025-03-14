@@ -21,7 +21,7 @@ def min_cost_lunches(n, costs):
 
 
 # Lecture du fichier input.txt
-with open('input.txt', 'r') as file:
+with open('../txtf/input.txt', 'r') as file:
     n = int(file.readline())
     costs = [int(file.readline()) for _ in range(n)]
 
@@ -29,5 +29,5 @@ with open('input.txt', 'r') as file:
 result = min_cost_lunches(n, costs)
 
 # Écriture du résultat dans output.txt
-with open('output.txt', 'w') as file:
+with open('../txtf/output.txt', 'w') as file:
     file.write(f"{result}")

@@ -1,5 +1,5 @@
 import unittest
-from src import remove_invalid_brackets
+from lab1.lab_15.src.task15 import remove_invalid_brackets
 
 class TestBrackets(unittest.TestCase):
     def test_examples(self):

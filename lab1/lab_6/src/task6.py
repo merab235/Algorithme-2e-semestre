@@ -11,13 +11,13 @@ def max_prizes(n):
     return k, prizes
 
 # Lecture du fichier input.txt
-with open('input.txt', 'r') as file:
+with open('../txtf/input.txt', 'r') as file:
     n = int(file.readline())
 
 # Calcul des prix
 k, prizes = max_prizes(n)
 
 # Écriture du résultat dans output.txt
-with open('output.txt', 'w') as file:
+with open('../txtf/output.txt', 'w') as file:
     file.write(f"{k}\n")
     file.write(" ".join(map(str, prizes)))

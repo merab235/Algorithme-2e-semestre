@@ -1,5 +1,5 @@
 import unittest
-from src import max_prizes
+from lab1.lab_6.src.task6 import max_prizes
 
 class TestMaxPrizes(unittest.TestCase):
     def test_example_1(self):

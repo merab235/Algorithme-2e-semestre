@@ -1,5 +1,5 @@
 import unittest
-from src import min_cost_lunches
+from lab1.lab_18.src.task18 import min_cost_lunches
 
 class TestCafeCoupons(unittest.TestCase):
     def test_example_1(self):

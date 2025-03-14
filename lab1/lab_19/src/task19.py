@@ -24,7 +24,7 @@ def print_optimal_parentheses(s, i, j):
 
 
 # Lecture du fichier input.txt
-with open('input.txt', 'r') as file:
+with open('../txtf/input.txt', 'r') as file:
     n = int(file.readline())
     p = []
     for _ in range(n):
@@ -37,5 +37,5 @@ m, s = matrix_chain_order(p)
 optimal_parentheses = print_optimal_parentheses(s, 0, n - 1)
 
 # Écriture du résultat dans output.txt
-with open('output.txt', 'w') as file:
+with open('../txtf/output.txt', 'w') as file:
     file.write(optimal_parentheses)

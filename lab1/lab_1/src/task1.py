@@ -10,7 +10,7 @@ def fractional_knapsack(n, W, items):
     return total_value
 
 # Lecture du fichier input.txt
-with open('input.txt', 'r') as file:
+with open('../txtf/input.txt', 'r') as file:
     n, W = map(int, file.readline().split())
     items = []
     for _ in range(n):
@@ -21,5 +21,5 @@ with open('input.txt', 'r') as file:
 max_value = fractional_knapsack(n, W, items)
 
 # Écriture du résultat dans output.txt
-with open('output.txt', 'w') as file:
+with open('../txtf/output.txt', 'w') as file:
     file.write(f"{max_value:.4f}")

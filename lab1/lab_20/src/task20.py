@@ -16,7 +16,7 @@ def count_almost_palindromes(N, K, S):
     return count
 
 # Lecture du fichier input.txt
-with open('input.txt', 'r') as file:
+with open('../txtf/input.txt', 'r') as file:
     N, K = map(int, file.readline().split())
     S = file.readline().strip()
 
@@ -24,5 +24,5 @@ with open('input.txt', 'r') as file:
 result = count_almost_palindromes(N, K, S)
 
 # Écriture du résultat dans output.txt
-with open('output.txt', 'w') as file:
+with open('../txtf/output.txt', 'w') as file:
     file.write(f"{result}")

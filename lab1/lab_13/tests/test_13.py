@@ -1,5 +1,5 @@
 import unittest
-from src import peut_diviser_en_trois
+from lab1.lab_13.src.task13 import peut_diviser_en_trois
 
 class TestSovenirs(unittest.TestCase):
     def test_examples(self):

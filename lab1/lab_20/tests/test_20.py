@@ -1,5 +1,5 @@
 import unittest
-from src import count_almost_palindromes
+from lab1.lab_20.src.task20 import count_almost_palindromes
 
 class TestAlmostPalindrome(unittest.TestCase):
     def test_example_1(self):

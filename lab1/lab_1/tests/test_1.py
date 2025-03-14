@@ -1,5 +1,6 @@
+
 import unittest
-from src import fractional_knapsack
+from lab1.lab_1.src.task1 import fractional_knapsack
 
 class TestFractionalKnapsack(unittest.TestCase):
     def test_example_1(self):

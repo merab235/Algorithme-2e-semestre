@@ -1,5 +1,5 @@
 import unittest
-from src import matrix_chain_order, print_optimal_parentheses
+from lab1.lab_19.src.task19 import matrix_chain_order, print_optimal_parentheses
 
 class TestMatricesProduct(unittest.TestCase):
     def test_example_1(self):
