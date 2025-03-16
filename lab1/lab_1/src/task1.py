@@ -1,3 +1,12 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+file_path1 = os.path.abspath(os.path.join(os.path.dirname(__file__), "../txtf/input.txt"))
+file_path2 = os.path.abspath(os.path.join(os.path.dirname(__file__), "../txtf/output.txt"))
+
+from lab1.utils import read_input_file, write_output_file  
+
 def fractional_knapsack(n, W, items):
     items.sort(key=lambda x: x[0]/x[1], reverse=True)
     total_value = 0.0
@@ -9,17 +18,11 @@ def fractional_knapsack(n, W, items):
         W -= fraction
     return total_value
 
-# Lecture du fichier input.txt
-with open('../txtf/input.txt', 'r') as file:
-    n, W = map(int, file.readline().split())
-    items = []
-    for _ in range(n):
-        value, weight = map(int, file.readline().split())
-        items.append((value, weight))
 
-# Calcul de la valeur maximale
+n, W, items = read_input_file(file_path1)
+
+
 max_value = fractional_knapsack(n, W, items)
 
-# Écriture du résultat dans output.txt
-with open('../txtf/output.txt', 'w') as file:
-    file.write(f"{max_value:.4f}")
+
+write_output_file(file_path2, max_value)

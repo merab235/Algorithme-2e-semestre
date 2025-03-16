@@ -1,3 +1,13 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+
+file_path1 = os.path.abspath(os.path.join(os.path.dirname(__file__), "../txtf/input.txt"))
+file_path2 = os.path.abspath(os.path.join(os.path.dirname(__file__), "../txtf/output.txt"))
+
+from lab1.utils import read_input_file3, write_output_file3 
+
 def count_almost_palindromes(N, K, S):
     count = 0
     for i in range(N):
@@ -15,14 +25,16 @@ def count_almost_palindromes(N, K, S):
                 count += 1
     return count
 
-# Lecture du fichier input.txt
-with open('../txtf/input.txt', 'r') as file:
-    N, K = map(int, file.readline().split())
-    S = file.readline().strip()
+data = read_input_file3(file_path1)
 
-# Calcul du nombre de sous-chaînes presque palindromes
+first_line = data[0].split()
+if len(first_line) < 2:
+    raise ValueError("Invalid input format: Expected two integers in the first line")
+
+N, K = map(int, first_line)
+S = data[1].strip()
+
 result = count_almost_palindromes(N, K, S)
 
-# Écriture du résultat dans output.txt
-with open('../txtf/output.txt', 'w') as file:
-    file.write(f"{result}")
+write_output_file3(file_path2, str(result))
+
