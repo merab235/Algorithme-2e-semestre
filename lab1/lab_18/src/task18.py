@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.
 file_path1 = os.path.abspath(os.path.join(os.path.dirname(__file__), "../txtf/input.txt"))
 file_path2 = os.path.abspath(os.path.join(os.path.dirname(__file__), "../txtf/output.txt"))
 
-from lab1.utils import read_input_filetask18, write_output_file3  
+from lab1.utils import read_input_file3, write_output_file3  
 
 def min_cost_lunches(n, costs):
     dp = [[float('inf')] * (n + 1) for _ in range(n + 1)]
@@ -23,7 +23,7 @@ def min_cost_lunches(n, costs):
 
     return min(dp[n][j] for j in range(n + 1))
 
-data = read_input_filetask18(file_path1)
+data = read_input_file3(file_path1)
 n = int(data[0])
 costs = list(map(int, data[1:]))
 
