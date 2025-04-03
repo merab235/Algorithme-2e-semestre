@@ -3,7 +3,6 @@ import os
 
 
 def find_path(n, edges, start, end):
-    """Fonction qui vérifie s'il existe un chemin entre start et end"""
     graph = [[] for _ in range(n + 1)]
     for u, v in edges:
         graph[u].append(v)
@@ -25,7 +24,6 @@ def find_path(n, edges, start, end):
 
 
 def main():
-    # Chemins relatifs selon votre structure
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     input_path = os.path.join(base_dir, 'txtf', 'input.txt')
     output_path = os.path.join(base_dir, 'txtf', 'output.txt')
