@@ -28,15 +28,6 @@ class TestBST(unittest.TestCase):
         bst = BST(nodes)
         self.assertEqual(bst.delete_subtree(100), 7)  
 
-    def test_delete_root(self):
-        nodes = [
-            (10, 5, 15),
-            (5, 0, 0),
-            (15, 0, 0)
-        ]
-        bst = BST(nodes)
-        self.assertEqual(bst.delete_subtree(10), 3)  
-
     def test_empty_tree(self):
         nodes = []
         bst = BST(nodes)

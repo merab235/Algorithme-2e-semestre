@@ -40,7 +40,7 @@ def main():
     musketeers = []
     for line in lines[N + 2:N + 6]:
         parts = list(map(int, line.split()))
-        musketeers.append((parts[0] - 1, parts[1] - 1, parts[2]))  # Conversion en 0-based
+        musketeers.append((parts[0] - 1, parts[1] - 1, parts[2]))  
 
     result = calculate_pendants(N, M, grid, (qx - 1, qy - 1), L, musketeers)
 

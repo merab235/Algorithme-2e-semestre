@@ -8,13 +8,10 @@ from lab3.lab_1.src.task1 import find_path
 
 
 def test_performance():
-    """Test de performance avec un grand graphe"""
-    # Génération d'un grand graphe
     n = 10000
     edges = [(i, i + 1) for i in range(1, n)]
     start, end = 1, n
 
-    # Test
     tracemalloc.start()
     start_time = time.time()
 

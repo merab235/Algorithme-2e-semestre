@@ -29,7 +29,6 @@ def main():
     output_path = os.path.join(base_dir, 'txtf', 'output.txt')
 
     try:
-        # Lecture du fichier
         with open(input_path, 'r') as f:
             lines = [line.strip() for line in f if line.strip()]
 
@@ -37,10 +36,8 @@ def main():
         edges = [tuple(map(int, line.split())) for line in lines[1:m + 1]]
         start, end = map(int, lines[m + 1].split())
 
-        # Exécution
         result = find_path(n, edges, start, end)
 
-        # Écriture
         with open(output_path, 'w') as f:
             f.write('1' if result else '0')
 

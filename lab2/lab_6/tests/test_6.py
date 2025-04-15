@@ -1,5 +1,5 @@
 import unittest
-from lab1.lab_20.src.task20 import check_bst
+from lab2.lab_6.src.task6 import check_bst
 
 class TestBinarySearchTree(unittest.TestCase):
     def test_correct_bst(self):

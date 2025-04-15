@@ -5,8 +5,8 @@ import os
 def find_min_k(n, edges):
     graph = [[] for _ in range(n + 1)]
     for u, v in edges:
-        graph[u].append((v, 0))  # Sens normal
-        graph[v].append((u, 1))  # Sens inverse (violation)
+        graph[u].append((v, 0))  
+        graph[v].append((u, 1))  
 
     max_k = 0
 

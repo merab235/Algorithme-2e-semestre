@@ -3,7 +3,6 @@ import os
 import sys
 from collections import deque
 
-# Ajout du dossier src au path Python
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 from lab3.lab_1.src.task1 import find_path
 
@@ -17,21 +16,17 @@ class TestLabirynthe(unittest.TestCase):
         """Teste l'intégration avec la structure de fichiers"""
         from lab3.lab_1.src.task1 import main
 
-        # Création temporaire de fichiers
         test_dir = os.path.dirname(__file__)
         base_dir = os.path.join(test_dir, '..')
 
         input_path = os.path.join(base_dir, 'txtf', 'input.txt')
         output_path = os.path.join(base_dir, 'txtf', 'output.txt')
 
-        # Créer un input.txt de test
         with open(input_path, 'w') as f:
             f.write("4 3\n1 2\n2 3\n3 4\n1 4")
 
-        # Exécuter main()
         main()
 
-        # Vérifier output.txt
         with open(output_path, 'r') as f:
             result = f.read().strip()
         self.assertEqual(result, "1")
